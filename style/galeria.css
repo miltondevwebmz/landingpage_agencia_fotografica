@@ -23,7 +23,7 @@
     font-size: clamp(2rem, 3vw, 3.2rem);
     max-width: 40rem;
     margin: 0 auto 1rem;
-    text-align: left;
+    text-align: center;
     color: #111;
 }
 
@@ -117,6 +117,7 @@
     max-width: 620px;
     margin: 0.75rem auto 0;
     color: #55606a;
+    text-align: center;
     line-height: 1.8;
 }
 
