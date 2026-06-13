@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FotoStudio</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/servicos.css">
+    <link rel="stylesheet" href="style/galeria.css">
+    <link rel="stylesheet" href="style/sobre.css">
+    <link rel="stylesheet" href="style/contacto.css">
+</head>
+<body>
+    <header>
+        <h2>FotoStudio</h2>
+        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+            <span class="nav-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <span class="nav-label">Menu</span>
+        </button>
+        <nav id="primary-navigation" aria-hidden="true">
+            <a href="#home">Home</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80" alt="Casal de noivos num momento fotográfico" loading="lazy">
+                <div class="hero-text">
+                    <p class="eyebrow">Fotografia de casamentos</p>
+                    <h1>Registamos o seu dia com emoção e beleza atemporal</h1>
+                    <p>Fotografia e vídeo de casamentos, retratos e eventos com elegância profissional e narrativa visual única.</p>
+                    <a href="#servicos" class="btn">Ver serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicos" id="servicos">
+            <h2>Serviços</h2>
+            <p class="servicos-intro">Oferecemos fotografia e vídeo profissional para casamentos, eventos, retratos e apresentações corporativas. Cada serviço combina narrativa visual, direção criativa e acabamento de alto impacto.</p>
+            <div class="servicos-container">
+                <div class="servico">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Casamentos" loading="lazy">
+                    <h3>Casamentos</h3>
+                    <p>Registamos o seu dia especial com luz natural, emoção e detalhes únicos.</p>
+                    <a href="#galeria" class="service-action">Ver catálogo</a>
+                </div>
+                <div class="servico">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Eventos corporativos" loading="lazy">
+                    <h3>Eventos</h3>
+                    <p>Fotografia e vídeo para eventos corporativos, festas e lançamentos com qualidade premium.</p>
+                    <a href="#galeria" class="service-action">Ver catálogo</a>
+                </div>
+                <div class="servico">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80" alt="Retratos" loading="lazy">
+                    <h3>Retratos</h3>
+                    <p>Retratos criativos e sessões de vídeo para portfólios, família e marcas pessoais.</p>
+                    <a href="#galeria" class="service-action">Ver catálogo</a>
+                </div>
+                <div class="servico">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Vídeo profissional" loading="lazy">
+                    <h3>Aniversarios</h3>
+                    <p>Produção de vídeos corporativos, reels e highlights com edição dinâmica e narrativa envolvente.</p>
+                    <a href="#galeria" class="service-action">Ver catálogo</a>
+                </div>
+                <div class="servico">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Vídeo profissional" loading="lazy">
+                    <h3>Batismo</h3>
+                    <p>Produção de vídeos corporativos, reels e highlights com edição dinâmica e narrativa envolvente.</p>
+                    <a href="#galeria" class="service-action">Ver catálogo</a>
+                </div>
+                <div class="servico">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Vídeo profissional" loading="lazy">
+                    <h3>Vídeo</h3>
+                    <p>Produção de vídeos corporativos, reels e highlights com edição dinâmica e narrativa envolvente.</p>
+                    <a href="#galeria" class="service-action">Ver catálogo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria" id="galeria">
+            <div class="galeria-header">
+                <p class="eyebrow">Galeria Catálogo</p>
+                <h2>Fotos e vídeos por categoria</h2>
+                <p>Escolha entre fotos ou vídeos e veja os trabalhos organizados como um catálogo vertical.</p>
+            </div>
+
+            <div class="galeria-tabs" role="tablist" aria-label="Galeria de fotos e vídeos">
+                <button type="button" class="galeria-tab active" data-target="fotos" id="tab-fotos" role="tab" aria-controls="galeria-fotos" aria-selected="true" tabindex="0">Fotos</button>
+                <button type="button" class="galeria-tab" data-target="videos" id="tab-videos" role="tab" aria-controls="galeria-videos" aria-selected="false" tabindex="-1">Vídeos</button>
+            </div>
+
+            <div class="galeria-content">
+                <div class="galeria-panel galeria-fotos active" id="galeria-fotos" role="tabpanel" aria-labelledby="tab-fotos">
+                    <div class="catalogue-category">
+                        <div class="catalogue-copy">
+                            <span class="eyebrow">Casamentos</span>
+                            <h3>Fotos de casamentos</h3>
+                            <p>Mostre aos clientes uma seleção ampla dos seus trabalhos — navegue pelas miniaturas abaixo.</p>
+                        </div>
+
+                        <div class="photo-grid photo-grid-6">
+                            <!-- 36 miniaturas -->
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=60" alt="casamento-1" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="casamento-2" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=60" alt="casamento-3" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=60" alt="casamento-4" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=60" alt="casamento-5" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="casamento-6" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=60" alt="casamento-1" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="casamento-2" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=60" alt="casamento-3" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=60" alt="casamento-4" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=60" alt="casamento-5" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="casamento-6" loading="lazy">
+                            
+                        </div>
+                    </div>
+                    <div class="catalogue-category">
+                        <div class="catalogue-copy">
+                            <span class="eyebrow">Eventos Corporativos</span>
+                            <h3>Fotos de eventos</h3>
+                            <p>Uma seleção ampla de trabalhos para eventos — navegue pelas miniaturas abaixo.</p>
+                        </div>
+
+                        <div class="photo-grid photo-grid-6">
+                            <!-- 12 miniaturas de eventos (6x2) -->
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60" alt="evento-1" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60" alt="evento-2" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60" alt="evento-3" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60" alt="evento-5" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60" alt="evento-6" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="evento-7" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="evento-7" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="evento-8" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="evento-9" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="evento-10" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=60" alt="evento-11" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="evento-12" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="catalogue-category">
+                        <div class="catalogue-copy">
+                            <span class="eyebrow">Corporativo</span>
+                            <h3>Fotos Corporativas</h3>
+                            <p>Seleção de trabalhos corporativos — portfólios, eventos empresariais e imagens institucionais.</p>
+                        </div>
+
+                        <div class="photo-grid photo-grid-6">
+                            <!-- 12 miniaturas corporativas (6x2) -->
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60" alt="corporate-4" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=60" alt="corporate-1" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60" alt="corporate-4" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60" alt="corporate-2" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60" alt="corporate-4" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=60" alt="corporate-6" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=60" alt="corporate-8" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60" alt="corporate-4" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=60" alt="corporate-5" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60" alt="corporate-10" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60" alt="corporate-11" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60" alt="corporate-4" loading="lazy">
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="galeria-panel galeria-videos" id="galeria-videos" role="tabpanel" aria-labelledby="tab-videos">
+                    <div class="catalogue-category">
+                        <div class="catalogue-copy">
+                            <span class="eyebrow">Vídeos</span>
+                            <h3>Trabalhos em vídeo</h3>
+                            <p>Selecione e veja os vídeos; o layout mostra 2 colunas por 3 linhas, sem scroll horizontal.</p>
+                        </div>
+
+                        <div class="video-grid-2x3">
+                            <!-- 6 vídeos (2x3) -->
+                            <video controls poster="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=60">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-bride-and-groom-kiss-by-the-sea-23632-large.mp4" type="video/mp4">
+                            </video>
+                            <video controls poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-romantic-couple-walking-on-the-beach-12170-large.mp4" type="video/mp4">
+                            </video>
+                            <video controls poster="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=60">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-couple-dance-at-wedding-1281-large.mp4" type="video/mp4">
+                            </video>
+                            <video controls poster="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=60">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-romantic-couple-walking-on-the-beach-12170-large.mp4" type="video/mp4">
+                            </video>
+                            <video controls poster="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=60">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-bride-and-groom-kiss-by-the-sea-23632-large.mp4" type="video/mp4">
+                            </video>
+                            <video controls poster="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=60">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-romantic-couple-walking-on-the-beach-12170-large.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <h2>Sobre nós</h2>
+            <p>Somos uma equipa de fotógrafos profissionais dedicados a capturar momentos únicos e transformá-los em memórias eternas. Com anos de experiência em casamentos, eventos corporativos e retratos, oferecemos um serviço personalizado e de alta qualidade para cada cliente.</p>
+        </section>
+        <section class="contacto" id="contacto">
+            <div class="contacto-intro">
+                <h2>Contacto</h2>
+                <p>Entre em contato conosco para agendar uma sessão, solicitar um orçamento personalizado ou falar sobre como podemos transformar seus momentos em arte visual.</p>
+            </div>
+
+            <div class="contacto-grid">
+                <div class="contacto-card">
+                    <span>Email</span>
+                    <p><a href="mailto:info@fotografia.com">info@fotografia.com</a></p>
+                </div>
+                <div class="contacto-card">
+                    <span>Telefone</span>
+                    <p>+351 912 345 678</p>
+                </div>
+                <div class="contacto-card">
+                    <span>Localização</span>
+                    <p>Porto, Portugal<br>Atendemos em estúdio e em locais externos.</p>
+                </div>
+            </div>
+
+            <div class="contacto-cta">
+                <p>Precisa de algo rápido? Envie-nos uma mensagem e responderemos o mais breve possível.</p>
+                <a href="mailto:info@fotografia.com" class="btn contacto-btn">Enviar mensagem</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© 2026 FotoStudio. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.galeria-tab');
+        const panels = document.querySelectorAll('.galeria-panel');
+
+        function setActiveTab(selectedTab) {
+            tabs.forEach((btn, index) => {
+                const isActive = btn === selectedTab;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                btn.tabIndex = isActive ? 0 : -1;
+                if (isActive) btn.focus();
+            });
+            panels.forEach(panel => {
+                const show = panel.id === `galeria-${selectedTab.dataset.target}`;
+                panel.classList.toggle('active', show);
+            });
+        }
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => setActiveTab(tab));
+            tab.addEventListener('keydown', (event) => {
+                if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+                event.preventDefault();
+                const nextIndex = event.key === 'ArrowRight'
+                    ? (index + 1) % tabs.length
+                    : (index - 1 + tabs.length) % tabs.length;
+                setActiveTab(tabs[nextIndex]);
+            });
+        });
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.getElementById('primary-navigation');
+
+        if (navToggle && nav) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                nav.classList.toggle('open');
+                navToggle.classList.toggle('open');
+                nav.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', expanded ? '-1' : '0'));
+                nav.setAttribute('aria-hidden', String(expanded));
+                const label = navToggle.querySelector('.nav-label');
+                if (label) {
+                    label.textContent = expanded ? 'Menu' : 'Fechar';
+                }
+            });
+
+            document.querySelectorAll('#primary-navigation a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    nav.setAttribute('aria-hidden', 'true');
+                    const label = navToggle.querySelector('.nav-label');
+                    if (label) {
+                        label.textContent = 'Menu';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

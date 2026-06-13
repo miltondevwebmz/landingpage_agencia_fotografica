@@ -1,0 +1,42 @@
+
+.servicos,
+.galeria,
+.sobre,
+.contacto {
+    padding: 4rem 2rem;
+}
+section h2{
+    font-size: clamp(2rem, 3vw, 3rem);
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+section p{
+    color: #55606a;
+    line-height: 1.75;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+@media (max-width: 680px) {
+    .servicos,
+.galeria,
+.sobre,
+.contacto{
+        padding: 3rem 1rem;
+    }
+}
+.sobre{
+    background: #ffffff;
+ 
+    box-shadow: 0 26px 80px rgba(15, 23, 42, 0.07);
+    padding: 4.5rem 2rem;
+}
+
+@media (max-width: 680px) {
+    .sobre{
+        padding: 3rem 1.25rem;
+    }
+}

@@ -1,0 +1,251 @@
+.galeria{
+    width: 100%;
+    padding: 4rem 2rem 6rem;
+    background: #eef4fb;
+}
+
+.galeria-header{
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.galeria-header .eyebrow{
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    color: #4a6cf7;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.galeria-header h2{
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.galeria-header p{
+    max-width: 34rem;
+    margin: 0 auto;
+    color: #55606a;
+    line-height: 1.8;
+}
+
+.galeria-tabs{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.galeria-tab{
+    border: none;
+    background: #fff;
+    color: #334155;
+    padding: 0.95rem 1.5rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.galeria-tab:focus-visible{
+    outline: 3px solid rgba(13, 110, 253, 0.35);
+    outline-offset: 4px;
+}
+
+.galeria-tab.active{
+    background: #0d6efd;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.galeria-content{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* evita scroll horizontal inesperado dentro da galeria */
+.galeria-content, .galeria{
+    overflow-x: hidden;
+}
+
+.galeria-panel{
+    display: none;
+}
+
+.galeria-panel.active{
+    display: block;
+}
+
+.catalogue-category{
+    padding: 2rem 0;
+    border-top: 1px solid rgba(79, 70, 229, 0.12);
+}
+
+.catalogue-category:first-child{
+    border-top: none;
+}
+
+.catalogue-copy{
+    max-width: 720px;
+    margin: 0 auto 1.75rem;
+    text-align: center;
+}
+
+.catalogue-copy .eyebrow{
+    letter-spacing: 0.35em;
+    color: #0d6efd;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.catalogue-copy h3{
+    margin: 0;
+    font-size: clamp(1.75rem, 2vw, 2.4rem);
+    color: #111;
+}
+
+.catalogue-copy p{
+    max-width: 620px;
+    margin: 0.75rem auto 0;
+    color: #55606a;
+    line-height: 1.8;
+}
+
+.catalogue-row{
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.catalogue-row.reverse{
+    flex-direction: row-reverse;
+}
+
+.catalogue-large,
+.catalogue-stack{
+    background: white;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.07);
+}
+
+.catalogue-large{
+    flex: 0 0 62%;
+    min-height: 420px;
+}
+
+.catalogue-stack{
+    flex: 0 0 38%;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.catalogue-stack img,
+.catalogue-large img,
+.catalogue-stack video,
+.catalogue-large video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.catalogue-large video{
+    min-height: 100%;
+}
+
+.video-card video{
+    min-height: 100%;
+}
+
+/* Grid de miniaturas 6x6 */
+.photo-grid{
+    display: grid;
+    gap: 0.6rem;
+    align-items: stretch;
+}
+
+.photo-grid-6{
+    grid-template-columns: repeat(6, 1fr);
+    /* cada célula tem altura fixa para manter 2 filas visíveis quando existirem 12 items */
+    grid-auto-rows: 140px;
+}
+
+.photo-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Grelha de vídeos 2x3: duas colunas x três linhas, sem scroll horizontal */
+.video-grid-2x3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 0.6rem;
+    align-items: stretch;
+}
+
+.video-grid-2x3 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo-grid img:hover{
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(15,23,42,0.12);
+}
+
+@media (max-width: 980px) {
+    .catalogue-row,
+    .catalogue-row.reverse{
+        flex-direction: column;
+    }
+
+    .photo-grid-6{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .catalogue-large,
+    .catalogue-stack{
+        flex: 1 1 auto;
+    }
+
+    .catalogue-stack{
+        grid-template-rows: repeat(2, 200px);
+    }
+}
+
+@media (max-width: 680px) {
+    .galeria{
+        padding: 3rem 1rem 4rem;
+    }
+
+    .catalogue-copy h3{
+        font-size: 1.85rem;
+    }
+
+    .catalogue-stack{
+        grid-template-rows: repeat(2, 180px);
+    }
+
+    .photo-grid-6{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Estilos das secções finais */
+
